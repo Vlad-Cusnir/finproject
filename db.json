@@ -17,7 +17,19 @@
         "rentalPricePerDay": 45,
         "availabilityStatus": "Rented",
         "features": ["Manual", "Bluetooth", "Backup Camera"]
-      }
+      },
+      {
+        "users": [
+          {
+            "id": 1,
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "john@example.com",
+            "password": "123456"
+          }
+        ],
+        "cars": []
+      } 
     ]
   }
 
