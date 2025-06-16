@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "vlad@eFinproject.com",
+      "password": "123456",
+      "firstName": "Vlad",
+      "lastName": "Rentals"
+    }
+  ],
+  "rentals": []
+}
