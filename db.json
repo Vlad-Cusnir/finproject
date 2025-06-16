@@ -1,35 +1,31 @@
 {
-    "cars": [
-      {
-        "id": 1,
-        "model": "Toyota Corolla",
-        "brand": "Toyota",
-        "year": 2022,
-        "rentalPricePerDay": 50,
-        "availabilityStatus": "Available",
-        "features": ["Air Conditioning", "Automatic", "GPS"]
-      },
-      {
-        "id": 2,
-        "model": "Honda Civic",
-        "brand": "Honda",
-        "year": 2021,
-        "rentalPricePerDay": 45,
-        "availabilityStatus": "Rented",
-        "features": ["Manual", "Bluetooth", "Backup Camera"]
-      },
-      {
-        "users": [
-          {
-            "id": 1,
-            "firstName": "John",
-            "lastName": "Doe",
-            "email": "john@example.com",
-            "password": "123456"
-          }
-        ],
-        "cars": []
-      } 
-    ]
-  }
-
+  "cars": [
+    {
+      "id": 1,
+      "model": "Toyota Corolla",
+      "brand": "Toyota",
+      "year": 2022,
+      "rentalPricePerDay": 50,
+      "availabilityStatus": "Available",
+      "features": ["Air Conditioning", "Automatic", "GPS"]
+    },
+    {
+      "id": 2,
+      "model": "Honda Civic",
+      "brand": "Honda",
+      "year": 2021,
+      "rentalPricePerDay": 45,
+      "availabilityStatus": "Rented",
+      "features": ["Manual", "Bluetooth", "Backup Camera"]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@example.com",
+      "password": "123456"
+    }
+  ]
+}

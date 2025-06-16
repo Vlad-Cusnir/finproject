@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bulma/css/bulma.min.css';
 
 // Updated paths based on your folder structure
-import Navbar from './context/Navbar';
+import Navbar from './components/Navbar';
 import HomePage from './context/App'; // Updated to match the App.jsx file location
 import LoginPage from './pages/Login'; // Updated to match the Login.jsx file location
 import RegisterPage from './pages/Register'; // Updated to match the Register.jsx file location

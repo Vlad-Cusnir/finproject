@@ -1,53 +1,63 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../context/AuthContext';
 
 function ProfilePage() {
+  const { user, updateProfile } = useContext(AuthContext);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
 
+  // Pre-fill form with user info
+  useEffect(() => {
+    if (user) {
+      setUsername(user.firstName);
+      setEmail(user.email);
+    }
+  }, [user]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Implement profile update functionality here
-    console.log('Profile Updated:', username, email);
+
+    if (!user) return;
+
+    const updatedUser = {
+      ...user,
+      firstName: username,
+      email: email,
+    };
+
+    updateProfile(updatedUser);
+    alert("Profile updated successfully!");
   };
 
   return (
-    <section className="section">
-      <div className="container">
-        <h1 className="title">Edit Profile</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="field">
-            <label className="label">Username</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                placeholder="Enter your username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </div>
+    <section className="py-12 px-6 bg-gray-100 min-h-screen">
+      <div className="max-w-xl mx-auto bg-white p-8 rounded shadow">
+        <h1 className="text-2xl font-bold mb-6 text-gray-800">Edit Profile</h1>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label className="block text-gray-700 mb-2">Username</label>
+            <input
+              type="text"
+              className="w-full px-4 py-2 border rounded-md"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
           </div>
-
-          <div className="field">
-            <label className="label">Email</label>
-            <div className="control">
-              <input
-                type="email"
-                className="input"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
+          <div>
+            <label className="block text-gray-700 mb-2">Email</label>
+            <input
+              type="email"
+              className="w-full px-4 py-2 border rounded-md"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
-
-          <div className="field">
-            <div className="control">
-              <button type="submit" className="button is-primary">
-                Save Changes
-              </button>
-            </div>
-          </div>
+          <button
+            type="submit"
+            className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+          >
+            Save Changes
+          </button>
         </form>
       </div>
     </section>

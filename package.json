@@ -13,7 +13,8 @@
     "axios": "^1.8.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "react-router-dom": "^6.23.0"
   },
   "browserslist": {
     "production": [
@@ -25,10 +26,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ],
-    "dependencies": {
-      "react-router-dom": "^6.x.x"
-    }
-
+    ]
   }
 }

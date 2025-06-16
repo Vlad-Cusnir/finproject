@@ -10,6 +10,8 @@ const Register = () => {
     email: "",
     password: ""
   });
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -18,23 +20,68 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await register(formData);
-    navigate("/login");
+    setError("");
+    setLoading(true);
+    try {
+      await register(formData);
+      navigate("/login");
+    } catch (err) {
+      setError("Registration failed. Please try again.");
+    }
+    setLoading(false);
   };
 
   return (
     <div className="p-4 max-w-md mx-auto">
       <h2 className="text-2xl font-bold mb-4">Register</h2>
       <form onSubmit={handleSubmit} className="space-y-3">
-        <input name="firstName" type="text" placeholder="First Name" className="w-full p-2 border rounded" onChange={handleChange} required />
-        <input name="lastName" type="text" placeholder="Last Name" className="w-full p-2 border rounded" onChange={handleChange} required />
-        <input name="email" type="email" placeholder="Email" className="w-full p-2 border rounded" onChange={handleChange} required />
-        <input name="password" type="password" placeholder="Password" className="w-full p-2 border rounded" onChange={handleChange} required />
-        <button className="w-full bg-green-500 text-white p-2 rounded">Register</button>
+        <input
+          name="firstName"
+          type="text"
+          placeholder="First Name"
+          className="w-full p-2 border rounded"
+          onChange={handleChange}
+          value={formData.firstName}
+          required
+        />
+        <input
+          name="lastName"
+          type="text"
+          placeholder="Last Name"
+          className="w-full p-2 border rounded"
+          onChange={handleChange}
+          value={formData.lastName}
+          required
+        />
+        <input
+          name="email"
+          type="email"
+          placeholder="Email"
+          className="w-full p-2 border rounded"
+          onChange={handleChange}
+          value={formData.email}
+          required
+        />
+        <input
+          name="password"
+          type="password"
+          placeholder="Password"
+          className="w-full p-2 border rounded"
+          onChange={handleChange}
+          value={formData.password}
+          required
+        />
+        {error && <p className="text-red-500">{error}</p>}
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full bg-green-500 text-white p-2 rounded disabled:opacity-50"
+        >
+          {loading ? "Registering..." : "Register"}
+        </button>
       </form>
     </div>
   );
 };
 
 export default Register;
-
