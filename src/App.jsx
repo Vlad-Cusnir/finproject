@@ -8,6 +8,9 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import Rentals from "./pages/Rentals";
 import AddRental from "./components/AddRental";
+import CityCompact from "./pages/CityCompact"; 
+import SUV from "./pages/SUV";
+
 
 function App() {
   return (
@@ -19,6 +22,8 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/rentals" element={<Rentals />} />
         <Route path="/addrental" element={<AddRental />} />
+        <Route path="/citycompact" element={<CityCompact />} />
+        <Route path="/suv" element={<SUV />} />
       </Routes>
     </div>
   );

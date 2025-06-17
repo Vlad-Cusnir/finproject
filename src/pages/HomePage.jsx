@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const carCategories = [
-  { name: "City Compact", image: "/images/City Compact car.png" },
-  { name: "SUV", image: "/images/SUV car rental.png" },
+  { name: "City Compact", image: "/images/City Compact car.png", link: "/citycompact" },
+  { name: "SUV", image: "/images/SUV car rental.png", link: "/suv" },
   { name: "Convertible", image: "/images/Convertible car rent.png" },
   { name: "Luxury", image: "/images/Luxury car rental.png" },
   { name: "GoKarts", image: "/images/GoKarts F1 car renta.png" },
@@ -63,7 +64,17 @@ const HomePage = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl mx-auto">
           {carCategories.map((car) => (
             <div key={car.name} className="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition text-center">
-              <img src={car.image} alt={car.name} className="w-full h-48 object-cover rounded mb-4" />
+              {car.link ? (
+                <Link to={car.link}>
+                  <img
+                    src={car.image}
+                    alt={car.name}
+                    className="w-full h-48 object-cover rounded mb-4 cursor-pointer hover:scale-105 transition"
+                  />
+                </Link>
+              ) : (
+                <img src={car.image} alt={car.name} className="w-full h-48 object-cover rounded mb-4" />
+              )}
               <h3 className="text-xl font-semibold">{car.name}</h3>
             </div>
           ))}
