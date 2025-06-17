@@ -66,6 +66,10 @@ If any images were custom-designed or generated, you can specify that:
 > Some images in this project are custom-designed or AI-generated.
 
 ## ⚙️ Setup Instructions
+cd "C:\Users\Admin\Desktop\Scoala IT\course webdev\finproject\vlads-rentals"
+git init
+git add .
+git commit -m "Message"
 
 1. **Clone the repository**  
    ```bash
