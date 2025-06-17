@@ -15,28 +15,57 @@ Coming soon...
 
 ## 📁 Project Structure
 
-```
-C:\Users\Admin\Desktop\Scoala IT\course webdev\finproject\vlads-rentals
-├── public\
-│   └── index.html
-├── src\
-│   ├── pages\
-│   │   └── HomePage.jsx
-│   ├── App.jsx
-│   └── main.jsx
-├── tailwind.config.js
-├── vite.config.js
+├── .git
+├── .gitignore
+├── db.json
+├── eslint.config.js
+├── index.html
+├── node_modules
+├── package-lock.json
 ├── package.json
-└── README.md
-```
+├── public
+│   ├── images
+│   │   ├── City Compact car.png
+│   │   ├── Convertible car rent.png
+│   │   ├── go karts and F1 raci.png
+│   │   ├── GoKarts F1 car renta.png
+│   │   ├── Luxury car rental.png
+│   │   └── SUV car rental.png
+│   └── vite.svg
+├── README.md
+├── src
+│   ├── api.js
+│   ├── App.css
+│   ├── App.jsx
+│   ├── assets
+│   │   └── react.svg
+│   ├── components
+│   │   ├── AddRental.jsx
+│   │   └── ProtectedRoute.jsx
+│   ├── index.css
+│   ├── main.jsx
+│   └── pages
+│       ├── Login.jsx
+│       ├── MainPage.jsx
+│       ├── Profile.jsx
+│       ├── Register.jsx
+│       └── Rentals.jsx
+└── vite.config.js
+
 
 ## 🖼️ Image Sources
 
-- Background Hero: [Unsplash - Road](https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1470&q=80)
-- SUV: [Unsplash](https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80)
-- Compact: [Unsplash](https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=800&q=80)
-- Luxury: [Unsplash](https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80)
-- Convertible: [Unsplash](https://images.unsplash.com/photo-1468071174046-657d9d351a40?auto=format&fit=crop&w=800&q=80)
+The images used in this project are sourced from various locations:
+
+- `City Compact car.png`: Created by [Unsplash](https://unsplash.com/)
+- `SUV car rental.png`: Created by [Unsplash](https://unsplash.com/)
+- `Convertible car rent.png`: Created by [Unsplash](https://unsplash.com/)
+- `Luxury car rental.png`: Created by [Unsplash](https://unsplash.com/)
+- `GoKarts F1 car renta.png`: Created by [Unsplash](https://unsplash.com/)
+- `go karts and F1 raci.png`: Created by [Unsplash](https://unsplash.com/)
+
+If any images were custom-designed or generated, you can specify that:  
+> Some images in this project are custom-designed or AI-generated.
 
 ## ⚙️ Setup Instructions
 
