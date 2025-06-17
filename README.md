@@ -1,12 +1,96 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Vlad's Rentals – Car Rental React App
 
-Currently, two official plugins are available:
+A modern and visually appealing car rental website built using **React** and **Tailwind CSS**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Fullscreen hero background
+- Vehicle categories: SUV, Compact, Luxury, Convertible
+- Uniform car images with hover effects
+- Responsive layout using Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Project Structure
+
+```
+├── .git
+├── .gitignore
+├── db.json
+├── eslint.config.js
+├── index.html
+├── node_modules
+├── package-lock.json
+├── package.json
+├── public
+│   ├── images
+│   │   ├── City Compact car.png
+│   │   ├── Convertible car rent.png
+│   │   ├── go karts and F1 raci.png
+│   │   ├── GoKarts F1 car renta.png
+│   │   ├── Luxury car rental.png
+│   │   └── SUV car rental.png
+│   └── vite.svg
+├── README.md
+├── src
+│   ├── api.js
+│   ├── App.css
+│   ├── App.jsx
+│   ├── assets
+│   │   └── react.svg
+│   ├── components
+│   │   ├── AddRental.jsx
+│   │   └── ProtectedRoute.jsx
+│   ├── index.css
+│   ├── main.jsx
+│   └── pages
+│       ├── Login.jsx
+│       ├── MainPage.jsx
+│       ├── Profile.jsx
+│       ├── Register.jsx
+│       └── Rentals.jsx
+└── vite.config.js
+
+
+## 🖼️ Image Sources
+
+The images used in this project are sourced from various locations:
+
+- `City Compact car.png`: Created by [Unsplash](https://unsplash.com/)
+- `SUV car rental.png`: Created by [Unsplash](https://unsplash.com/)
+- `Convertible car rent.png`: Created by [Unsplash](https://unsplash.com/)
+- `Luxury car rental.png`: Created by [Unsplash](https://unsplash.com/)
+- `GoKarts F1 car renta.png`: Created by [Unsplash](https://unsplash.com/)
+- `go karts and F1 raci.png`: Created by [Unsplash](https://unsplash.com/)
+
+If any images were custom-designed or generated, you can specify that:  
+> Some images in this project are custom-designed or AI-generated.
+
+## ⚙️ Setup Instructions
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/your-username/vlads-rentals.git
+   cd vlads-rentals
+   ```
+
+2. **Install dependencies**  
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**  
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser at [http://localhost:5173](http://localhost:5173)
+
+## 🛠️ Technologies
+
+- React
+- Vite
+- Tailwind CSS
+
+## 📄 License
+
+This project is licensed for educational purposes. Unsplash image licenses apply individually.
