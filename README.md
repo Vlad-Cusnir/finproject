@@ -3,9 +3,6 @@
 
 A modern and visually appealing car rental website built using **React** and **Tailwind CSS**.
 
-## 🌍 Live Preview
-Coming soon...
-
 ## 🚀 Features
 
 - Fullscreen hero background
@@ -15,6 +12,7 @@ Coming soon...
 
 ## 📁 Project Structure
 
+```
 ├── .git
 ├── .gitignore
 ├── db.json
@@ -69,9 +67,10 @@ If any images were custom-designed or generated, you can specify that:
 
 ## ⚙️ Setup Instructions
 
-1. **Navigate to the project folder**  
+1. **Clone the repository**  
    ```bash
-   cd "C:\Users\Admin\Desktop\Scoala IT\course webdev\finproject\vlads-rentals"
+   git clone https://github.com/your-username/vlads-rentals.git
+   cd vlads-rentals
    ```
 
 2. **Install dependencies**  
