@@ -1,70 +1,75 @@
-// src/pages/MainPage.jsx
 import React from 'react';
 
-export default function MainPage() {
+const carCategories = [
+  {
+    name: 'City Compact',
+    image: '/images/City Compact car.png',
+  },
+  {
+    name: 'SUV',
+    image: '/images/SUV car rental.png',
+  },
+  {
+    name: 'Convertible',
+    image: '/images/Convertible car rent.png',
+  },
+  {
+    name: 'Luxury',
+    image: '/images/Luxury car rental.png',
+  },
+  {
+    name: 'GoKarts',
+    image: '/images/GoKarts F1 car renta.png',
+  },
+  {
+    name: 'GoKarts F1',
+    image: '/images/go karts and F1 raci.png',
+  },
+];
+
+const HomePage = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center h-[500px]" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1470&q=80')` }}>
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-white text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-            Vlad's Rentals
-          </h1>
-          <p className="text-gray-300 max-w-xl mb-8 text-lg md:text-xl drop-shadow">
-            Reliable and affordable car rentals at your fingertips. Explore our fleet and book your perfect ride today.
-          </p>
-          <div>
-            <a href="/login" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded mr-4 font-semibold shadow">
-              Login
-            </a>
-            <a href="/register" className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded font-semibold shadow">
-              Register
-            </a>
-          </div>
+      <section
+        className="relative h-screen bg-cover bg-center"
+        style={{
+          backgroundImage: `url('/images/hero.jpg')`,
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="relative z-10 text-center text-white px-4 flex flex-col justify-center items-center h-full">
+          <h1 className="text-5xl font-bold mb-4">Car Rental in Europe with Vlad's Rentals</h1>
+          <p className="text-xl mb-6">Reliable. Affordable. Stylish.</p>
+          <button className="bg-yellow-500 text-black px-6 py-3 font-semibold rounded hover:bg-yellow-600 transition">
+            Book Now
+          </button>
         </div>
       </section>
 
-      {/* Featured Cars */}
-      <section className="max-w-6xl mx-auto py-12 px-4">
-        <h2 className="text-3xl font-bold text-center mb-10">Our Fleet</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            {
-              name: 'SUV Adventure',
-              img: 'https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=800&q=60',
-              desc: 'Spacious SUV perfect for family trips and off-road adventures.'
-            },
-            {
-              name: 'Compact City Car',
-              img: 'https://images.unsplash.com/photo-1501238295340-b3c3b72b0057?auto=format&fit=crop&w=800&q=60',
-              desc: 'Fuel efficient and easy to park, ideal for urban driving.'
-            },
-            {
-              name: 'Luxury Sedan',
-              img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=60',
-              desc: 'Experience premium comfort and style for business or leisure.'
-            },
-            {
-              name: 'Convertible Fun',
-              img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=60',
-              desc: 'Feel the wind in your hair with our sporty convertible.'
-            },
-          ].map((car) => (
-            <div key={car.name} className="bg-white rounded shadow hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-              <img src={car.img} alt={car.name} className="w-full h-48 object-cover" />
+      {/* Fleet Section */}
+      <section className="bg-gray-100 py-16">
+        <h2 className="text-3xl font-bold text-center mb-12">A fleet that meets your needs</h2>
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          {carCategories.map((category) => (
+            <div key={category.name} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition overflow-hidden text-center">
+              <div className="w-full h-[200px] overflow-hidden flex items-center justify-center">
+                <img
+                  src={category.image}
+                  alt={category.name}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
               <div className="p-4">
-                <h3 className="font-semibold text-lg mb-2">{car.name}</h3>
-                <p className="text-gray-600 text-sm">{car.desc}</p>
+                <h3 className="text-xl font-semibold">{category.name}</h3>
               </div>
             </div>
           ))}
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-gray-300 py-6 text-center">
-        &copy; {new Date().getFullYear()} Vlad's Rentals. All rights reserved.
-      </footer>
     </div>
   );
-}
+};
+
+export default HomePage;
